@@ -1,0 +1,6 @@
+# If you don't want to use vars.yml file, replace these values in main file
+proxy_url: "http://proxy:8080" # provide if you have any proxy url
+no_proxy: "<no_proxy_url>"     # provide if you have any no_proxy IPs
+control_plane_ip: "<controlPlaneIp or workerNodeIp>" # provide other control plane/worker node IP where you want to execute these files
+pod_network_cidr: "192.168.0.0/16" # provide pod CIDR
+flannel_url: "https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml"

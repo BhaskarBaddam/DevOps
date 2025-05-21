@@ -1,1 +1,11 @@
+# To pass variables to Containerfile/Dockerfile, we need to use --build-arg and then pass variable.
+# For each variable, we need to define --build-arg everytime.
+podman build --build-arg componentName={{ component_Name }} --build-arg artifactVersion={{ artifactVersion }} \
+-t {{ dockerimgname }} /appl_logs/k8s
 
+# And also define variables in Containerfile/Dockerfile like below
+ARG componentName
+ARG artifactVersion
+ENV COMPONENT_NAME=${componentName}
+ENV ARTIFACT_VERSION=${artifactVersion}
+COPY ${COMPONENT_NAME}-${ARTIFACT_VERSION}.jar ${COMPONENT_NAME}.jar

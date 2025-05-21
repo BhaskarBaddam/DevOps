@@ -1,0 +1,11 @@
+# To generate print command again for worker nodes to join. Should be done in master-node
+kubeadm token create --print-join-command
+
+# Before executing the playbook, perform a syntax check to catch any YAML or syntax errors:
+ansible-playbook k8s-worker.yml --syntax-check
+
+# Perform a dry run to see what changes would be made without actually applying them:
+ansible-playbook k8s-worker.yml --check --extra-vars "@vars.yml"
+
+# Actual command to be executed
+ansible-playbook k8s-worker.yml --extra-vars "@vars.yml"

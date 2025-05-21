@@ -1,0 +1,14 @@
+# Some important ansible commands 
+
+# To check syntax in k8s-setup.yml
+ansible-playbook k8s-setup.yml --syntax-check
+# for DRY run without actually executing k8s-setup.yml file.
+ansible-playbook k8s-setup.yml --check --extra-vars "@vars.yml"
+# for DRY run without actually executing k8s-setup.yml file including inventory file.
+ansible-playbook -i inventory_file k8s-worker.yml --check --extra-vars "@vars.yml"
+# Actually command to run when using vars.yml file
+ansible-playbook k8s-setup.yml --extra-vars "@vars.yml"
+# Actually command to run without using vars.yml file
+ansible-playbook k8s-setup.yml
+# Command to run with inventory file
+ansible-playbook -i inventory_file k8s-worker.yml --extra-vars "@vars.yml"

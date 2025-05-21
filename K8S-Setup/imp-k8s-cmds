@@ -1,0 +1,22 @@
+# Some useful kubernetes commands
+
+# To generate join command again. To be executed in master node.
+kubeadm token create --print-join-command
+
+# To display labels of all nodes
+kubectl get nodes --show-labels
+
+# To label nodes as app=orfta-dev
+kubectl label nodes <node_name> app=orfta-dev
+
+# To describe pod and see events in it. Assuming orfta-dev as namespace
+kubectl describe pod <podname> -n orfta-dev
+
+# To check pod logs. Assuming orfta-dev as namespace
+kubectl logs <podname> -n orfta-dev -f
+
+# To apply yaml file
+kubectl apply -f orftaservice-deployment.yml
+
+# To delete deployment
+kubectl delete deployment <deployment_name> -n orfta-dev

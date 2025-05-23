@@ -18,3 +18,7 @@ services:
     image: redis                                  
 -----------
 
+# Podman doesnot have a native equivalent to Docker Swarm.
+# Docker Swarm is for orchaestrating multi-node container clusters.
+docker swarm init, docker servive create
+

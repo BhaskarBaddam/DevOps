@@ -20,7 +20,8 @@ services:
 
 # Podman doesnot have a native equivalent to Docker Swarm.
 # Docker Swarm is for orchaestrating multi-node container clusters.
-docker swarm init, docker servive create
+docker swarm init
+docker servive create
 
 # Docker Compose is a tool used to run multi-conatiner applications on a single machine. Uses docker-compose.yml.
 docker-compose up

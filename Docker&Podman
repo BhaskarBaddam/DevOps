@@ -1,0 +1,20 @@
+# To run single container, use 
+docker run -d --name <continer-name> -p 80:80 <image-name>
+podman run -d --name <continer-name> -p 80:80 <image-name>
+
+# To run multiple containers, use a compose.yml file and then run 
+docker-compose up
+podman-compose up
+
+compose.yml
+-----------
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+  redis:
+    image: redis                                  
+-----------
+

@@ -1,4 +1,4 @@
-# Some useful kubernetes commands
+# SOME USEFUL K8S COMMANDS:
 
 # To generate join command again. To be executed in master node.
 kubeadm token create --print-join-command

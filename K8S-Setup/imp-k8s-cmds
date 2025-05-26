@@ -22,5 +22,6 @@ kubectl apply -f orftaservice-deployment.yml
 kubectl delete deployment <deployment_name> -n orfta-dev
 
 # Labelling nodes
-kubectl get nodes --show-labels               # to display nodes of all labels
-kubectl label node <node-name> app=orfta-dev  # to add label app=orfta-dev to node node-name
+kubectl get nodes --show-labels                # to display nodes of all labels
+kubectl label nodes <node-name> app=orfta-dev  # to add label app=orfta-dev to node <node-name>
+kubectl label nodes <node-name> app-           # to remove label app for node <node-name> 

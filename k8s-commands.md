@@ -41,7 +41,9 @@ It allows application to access inside an organisation. It typically provides ac
 #### Load Balancer
 It exposes application to external world. It is applicable to Cloud only. It creates an load balancer IP which can be exposed to external world. It uses Cloud-Control Manager to generate public load balancer IP in Cloud (AWS, Azure, GCP, etc.,).\
 Anybody in the world can access this service.
+
 <img width="508" alt="image" src="https://github.com/user-attachments/assets/a5787b51-1f41-4f6a-9e38-9bb1bdba3447" />
+
 
 ### When to use which service
 Generally we will use **ClusterIP** for databases because we don't want them to be exposed externally and databases need to be accessible only to application tier.\

@@ -19,6 +19,10 @@ kubectl get pods -o wide
 ```
 kubectl get pods -w
 ```
+#### To check what happening with get pods command
+```
+kubectl get pods -v=7
+```
 ## K8S Service
 ### What if no service ?
 When a pod restarts, because of auto-healing capability new pods are generated and it's IP will change. So, it is difficult to point client to pod IPs. 

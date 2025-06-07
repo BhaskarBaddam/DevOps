@@ -9,5 +9,5 @@ To extend k8s capabilities, there are 3 resources:
 
 **Custom Resource Definition (CRD)**: Defining a new type of API to k8s. It is wrtitten as yaml file. It is created by external applications/tools.\
 **Custom Resource**: It is created by users. It is vlidated against CRD.\
-**Custom Controller**: It is required to create and watch custom resources. Without a controller, the resources are of no use. This will be provided by external application/tools.\
-It can be written in java, python, golang.
+**Custom Controller**: It is required to create and watch custom resources. Without a controller, the resources are of no use.\
+This will be provided by external application/tools. It can be written in java, python, golang.

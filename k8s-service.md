@@ -53,3 +53,9 @@ Anybody in the world can access this service.
 Generally we will use **ClusterIP** for databases because we don't want them to be exposed externally and databases need to be accessible only to application tier.\
 We will use **NodePort** when we don't want to expose service to the world and should be accessible only within an VPC/organization.\
 We will use **Load Balancer** for mostly frontend applucations as these are need to accessible to the world/clients.
+### Basic Service commands
+```
+kubectl get service -n <namespace>
+kubectl get svc -n <namespace>
+kubectl describe svc <servicename> -n <namespace>
+```

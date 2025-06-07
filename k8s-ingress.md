@@ -9,5 +9,7 @@ With enterprise load balancing, we can use single LB for multiple microservices.
 To overcome problems like above, Ingress was created. To use ingress we also need Ingress Controller.\
 Ingress            ---> created by users as a resource.
 Ingress Controller ---> created by Load Balancing companies. Users need to install this from github.
+
 <img width="575" alt="image" src="https://github.com/user-attachments/assets/24b19a85-b92a-40e8-86b4-aaa1622b831d" />
+
 If we install ingress controller only, an IP will be assigned to ingress resource. That can be used for domain mapping.

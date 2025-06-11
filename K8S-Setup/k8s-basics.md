@@ -1,0 +1,32 @@
+## BASIC K8S COMMANDS:
+
+#### To generate join command again. To be executed in master node.
+```
+kubeadm token create --print-join-comman
+```
+#### To label nodes as app=orfta-dev
+```
+kubectl label nodes <node_name> app=orfta-dev
+```
+#### To describe pod and see events in it. Assuming orfta-dev as namespace
+```
+kubectl describe pod <podname> -n orfta-dev
+```
+#### To check pod logs. Assuming orfta-dev as namespace
+```
+kubectl logs <podname> -n orfta-dev -f
+```
+#### To apply yaml file
+```
+kubectl apply -f orftaservice-deployment.yml
+```
+#### To delete deployment
+```
+kubectl delete deployment <deployment_name> -n orfta-dev
+```
+#### Labelling nodes
+```
+kubectl get nodes --show-labels                # to display nodes of all labels
+kubectl label nodes <node-name> app=orfta-dev  # to add label app=orfta-dev to node <node-name>
+kubectl label nodes <node-name> app-           # to remove label app for node <node-name>
+```

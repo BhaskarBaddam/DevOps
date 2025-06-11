@@ -6,8 +6,8 @@
 - It follows yaml syntax
 
 #### Action files
-Create `.github/workflows` in root of the repository.\
-We can place any number of action files in `.github/workflows`
+- Create `.github/workflows` in root of the repository.
+- We can place any number of action files in `.github/workflows`
 
 #### Comparision to Jenkins
 - Here we have **Runners** similar to **Nodes** in jenkins.
@@ -19,9 +19,9 @@ We can place any number of action files in `.github/workflows`
 3. When security is key
 
 #### How to use Self-Hosted Runners ?
-settings --> runners --> create self-hosted runners\
-Execute the displayed commands on the server we want to configure.\
-Open respective ports for the server accordingly.\
+- settings --> runners --> create self-hosted runners
+- Execute the displayed commands on the server we want to configure.
+- Open respective ports for the server accordingly.
 This is using github hosted runners.
 ```
 jobs:

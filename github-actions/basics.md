@@ -9,7 +9,7 @@
 - Create `.github/workflows` in root of the repository.
 - We can place any number of action files in `.github/workflows`
 
-#### Comparision to Jenkins
+#### Runners
 - Here we have **Runners** similar to **Nodes** in jenkins.
 - We can create self-hosted runners or use github hosted runners.
 
@@ -36,3 +36,8 @@ jobs:
 ```
 
 #### Secrets and Variables
+Similar to credentials in jenkins, we can store secrets in Secrets and Variables section in settings.
+
+#### Camparing to Jenkins
+- If we use public repo, use github actions.
+- Jenkins has wide range of plugins which makes it easy to integrate.

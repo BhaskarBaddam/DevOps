@@ -1,4 +1,5 @@
-# 📁 .github/workflows/main.yml
+### 📁 .github/workflows/main.yml
+```
 name: Full CI/CD Pipeline
 
 on:
@@ -34,10 +35,10 @@ jobs:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
       NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+```
 
----
-
-# 📁 .github/workflows/build.yml
+### 📁 .github/workflows/build.yml
+```
 name: Reusable Build
 
 on:
@@ -72,10 +73,10 @@ jobs:
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
         run: |
           mvn deploy -Dnexus.username=$NEXUS_USERNAME -Dnexus.password=$NEXUS_PASSWORD
+```
 
----
-
-# 📁 .github/workflows/test.yml
+### 📁 .github/workflows/test.yml
+```
 name: Reusable Test
 
 on:
@@ -99,10 +100,10 @@ jobs:
             -Dsonar.projectKey=myapp \
             -Dsonar.host.url=https://sonar.mycompany.com \
             -Dsonar.login=$SONAR_TOKEN
+```
 
----
-
-# 📁 .github/workflows/deploy.yml
+### 📁 .github/workflows/deploy.yml
+```
 name: Reusable Deploy
 
 on:
@@ -154,3 +155,4 @@ jobs:
           ansible-playbook -i inventories/${{ inputs.environment }}/hosts.ini site.yml \
             --user ${{ secrets.SSH_USER }} \
             --extra-vars "env=${{ inputs.environment }}"
+```

@@ -1,6 +1,6 @@
 ## Calling shared libraries or other workflows
 
-**`main.yml`** (caller workflow)
+**`main.yml`** (caller workflow)\
 Need to use `uses:`
 ```
 name: Main Workflow
@@ -16,8 +16,8 @@ jobs:
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
-**`test.yml`** (called/reusable workflow)
-Need to use `workflow_call:` in sub-groocy like file.
+**`test.yml`** (called/reusable workflow)\
+Need to use `workflow_call:` in sub-groovy like file.
 ```
 name: Test Reusable Workflow
 

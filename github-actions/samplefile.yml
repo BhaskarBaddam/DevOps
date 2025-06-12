@@ -1,0 +1,29 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to main branch
+  pull_request:
+    branches:
+      - main  # Also trigger on PR to main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest  # Run job on GitHub-hosted Ubuntu machine
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v3  # Checks out the code to runner
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'  # Specify Node.js version
+
+    - name: Install dependencies
+      run: npm install  # Installs packages from package.json
+
+    - name: Run tests
+      run: npm test  # Runs test script (defined in package.json)

@@ -1,5 +1,5 @@
 ### Codespace in Github
-- 2cpu and 4gb ram\
+- 2cpu and 4gb ram
 - Click on code --> codespace
 - search with `> dev` in search bar and select first one
 - search for `terraform` and select verified one

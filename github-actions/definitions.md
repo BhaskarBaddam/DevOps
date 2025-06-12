@@ -1,5 +1,5 @@
 
-To trigger the pipeline use `on:` option.\
+To **trigger** the pipeline use `on:` option.\
 To trigger manually, use like below
 ```
 on:
@@ -10,16 +10,20 @@ on:
     branches:
       - main  # Trigger workflow on push to main branch
 ```
-Naming the job
+**Naming** the job
 ```
 jobs:
   build:
 ```
-Selecting runner
+Selecting **Runner**
 ```
 runs-on: ubuntu-latest  # Run job on GitHub-hosted Ubuntu machine
 ```
-To checkout code or to use inbuilt plugins we need to use `uses`
+Selecting **Self-hosted runners** by assigning tags to them.
+```
+runs-on: [self-hosted, linux, ansible]
+```
+To **checkout code** or to use inbuilt **plugins** we need to use `uses`
 ```
 uses: actions/checkout@v3  # Checks out the code to runner
 ```
@@ -30,7 +34,7 @@ To checkout different repo code to the runner
     repository: another-org/another-repo
     token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```
-To use multiple runners. By-default these jobs run in parallel.
+To use **multiple runners**. By-default these jobs run in parallel.
 ```
 jobs:
   build-linux:
@@ -48,7 +52,7 @@ jobs:
     steps:
       - run: echo "Build on macOS"
 ```
-You can make jobs run in sequence by using `needs`:
+You can make jobs run in **sequence** by using `needs`:
 ```
 jobs:
   build:

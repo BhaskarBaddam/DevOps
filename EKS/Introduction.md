@@ -17,7 +17,8 @@
 - Expose the application to users/outside.
 
 #### EKS Setup
-- EKS can be created from AWS console
-- It can also be created from local using kubectl, eksctl, awscli by configuring aws `aws configure` (Suggested)
+1. EKS can be created from AWS console
+2. It can also be created from local using kubectl, eksctl, awscli by configuring aws `aws configure` (Suggested)
+   - When we create EKS using CLI, in backend CloudFormation templates will be created for cluster 
 
 Use this link for hands-on - https://github.com/iam-veeramalla/aws-devops-zero-to-hero/blob/main/day-22/README.md
